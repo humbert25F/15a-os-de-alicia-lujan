@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quince Años | Alicia Luján</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yesteryear&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Fredoka:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="cerrado">
+
+<!-- Pon tu mp3 en assets/audio/musica.mp3 -->
+<audio id="musica" src="assets/audio/musica.mp3" loop preload="auto"></audio>
+
+<div id="entrada" class="rosa">
+  <div class="marco">
+    <p class="pildora">Quince Años</p>
+    <p class="titulo">Alicia Luján</p>
+    <button class="boton" id="abrir" type="button">Abrir invitación</button>
+  </div>
+</div>
+
+<main>
+  <section class="rosa" id="inicio">
+    <div class="marco">
+      <figure><img src="assets/img/melody.png" alt="Melody con vestido de princesa"></figure>
+      <div class="texto">
+        <p class="pildora">Quince Años</p>
+        <h1 class="titulo">Alicia Luján</h1>
+        <button class="boton" id="musica-btn" type="button" aria-pressed="false">Dale play!</button>
+        <p class="nota">Para acompañar este momento con música (Djo - End Of Beginning)</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="rosa claro" id="invitacion">
+    <div class="marco">
+      <figure><img src="assets/img/kitty.png" alt="Kitty con vestido rosa y un osito"></figure>
+      <div class="texto">
+        <p class="frase">Los momentos más especiales se comparten con aquellos que tanto queremos. Vos estás entre ellos. Por eso te invito a festejar conmigo!</p>
+        <h2 class="subtitulo">Preparate!</h2>
+        <p>Solo faltan</p>
+        <div class="cuenta" role="timer">
+          <div><b id="d">0</b><span>días</span></div>
+          <div><b id="h">0</b><span>horas</span></div>
+          <div><b id="m">0</b><span>min</span></div>
+          <div><b id="s">0</b><span>seg</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="menta" id="fiesta">
+    <div class="marco">
+      <figure><img src="assets/img/pochacco.png" alt="Pochacco con chaleco y moño"></figure>
+      <div class="texto">
+        <ul class="datos">
+          <li><b>Fecha:</b> 26 de diciembre a las 21 hs</li>
+          <li><b>Lugar:</b> Royal eventos</li>
+          <li><b>Tenida:</b> Elegante</li>
+        </ul>
+        <!-- Cambia el enlace por el de la ubicación exacta -->
+        <a class="boton" href="https://www.google.com/maps/search/?api=1&query=Royal+eventos" target="_blank" rel="noopener">Ver ubicación en Google Maps</a>
+        <p class="nota">Obs: te pido evitar el color rosa y lavanda, reservado para la quinceañera y sus mejores amigos.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="celeste" id="regalos">
+    <div class="marco">
+      <figure><img src="assets/img/cinnamon.png" alt="Cinnamon con vestido y tiara"></figure>
+      <div class="texto">
+        <h2 class="subtitulo">Sugerencia de regalos</h2>
+        <ul class="regalos">
+          <li>Peluches</li>
+          <li>Zapatos, calzado deportivo (T37)</li>
+          <li>Perfumes</li>
+          <li>Aparatos electrónicos: camaritas, auriculares</li>
+        </ul>
+        <p>Si prefieren no buscar algo específico, también acepto dinero como opción:</p>
+        <div class="alias">
+          <p><b>ALIAS 0981803546</b><br>Roger Acosta Santacruz<br>Banco Atlas</p>
+          <button class="boton" id="copiar" type="button">Copiar alias</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lila" id="confirmar">
+    <div class="marco">
+      <figure><img src="assets/img/kuromi.png" alt="Kuromi con vestido y corona"></figure>
+      <div class="texto">
+        <p class="frase">Cada invitado cuenta en mi gran día. Ayúdame confirmando si vienes al 0971202702</p>
+        <a class="boton" href="https://wa.me/595971202702?text=Hola!%20Confirmo%20mi%20asistencia%20a%20los%20quince%20de%20Alicia" target="_blank" rel="noopener">Confirmar por WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="crema" id="misa">
+    <div class="marco">
+      <figure><img src="assets/img/purin.png" alt="Purin con moño y un postre"></figure>
+      <div class="texto">
+        <p class="frase">Hay fechas que se celebran y otras que se agradecen por eso la invitación más especial es para darle gracias a Dios por tantas bendiciones.</p>
+        <ul class="datos">
+          <li><b>Domingo 27 de diciembre</b></li>
+          <li><b>Iglesia:</b> Santuario Nacional del Sagrado Corazón de Jesús</li>
+          <li><b>Hora:</b> 19:00</li>
+        </ul>
+        <a class="boton" href="https://www.google.com/maps/search/?api=1&query=Santuario+Nacional+del+Sagrado+Corazón+de+Jesús" target="_blank" rel="noopener">Ver ubicación en Google Maps</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

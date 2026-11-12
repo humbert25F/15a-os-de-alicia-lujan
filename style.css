@@ -1,0 +1,114 @@
+:root{
+  --oro:#b98a3c; --oro-claro:#e8c77d;
+  --rosa:#f8c8d6; --rosa-fuerte:#d9567f;
+  --menta:#cdebdd; --menta-fuerte:#3f8a72;
+  --celeste:#cfe3f5; --celeste-fuerte:#4a7fb5;
+  --lila:#5b3f7a; --crema:#fbeec2; --crema-fuerte:#a8701f;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:500 1.25rem/1.5 'Cormorant Garamond',Georgia,serif}
+body.cerrado{overflow:hidden}
+
+/* Paleta por sección (una por lámina) */
+.rosa{--bg:var(--rosa);--fuerte:var(--rosa-fuerte);--tx:#4a2f3b}
+.rosa.claro{--bg:#fde4ec}
+.menta{--bg:var(--menta);--fuerte:var(--menta-fuerte);--tx:#24493e}
+.celeste{--bg:var(--celeste);--fuerte:var(--celeste-fuerte);--tx:#27425f}
+.lila{--bg:var(--lila);--fuerte:#f5a9d0;--tx:#fff}
+.crema{--bg:var(--crema);--fuerte:var(--crema-fuerte);--tx:#5a3d12}
+
+section{
+  background-color:var(--bg);color:var(--tx);
+  background-image:radial-gradient(circle at 1px 1px,rgba(255,255,255,.45) 1.5px,transparent 0);
+  background-size:22px 22px;
+  padding:clamp(1rem,4vw,3rem);
+}
+
+/* Fondo difuminado: una capa detrás de cada sección */
+section{position:relative;overflow:hidden;isolation:isolate}
+section::before,#entrada::before{
+  content:"";position:absolute;inset:-30px;z-index:-1;
+  background-size:cover;background-position:center;background-repeat:no-repeat;
+  filter:blur(10px);
+}
+#inicio::before{background-image:url("assets/img/melody.png")}
+#invitacion::before{background-image:url("assets/img/kitty.png")}
+#fiesta::before{background-image:url("assets/img/pochacco.png")}
+#regalos::before{background-image:url("assets/img/cinnamon.png")}
+#confirmar::before{background-image:url("assets/img/kuromi.png")}
+#misa::before{background-image:url("assets/img/purin.png")}
+#entrada::before{background-image:url("assets/img/melody.png")}
+
+/* Marco dorado doble, como las láminas */
+.marco{
+  max-width:940px;margin:0 auto;text-align:center;
+  padding:clamp(2.2rem,5vw,3.5rem) clamp(1.4rem,4vw,3rem);
+  border:2px solid var(--oro);outline:1px solid var(--oro);outline-offset:-12px;
+  display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.3fr);gap:2rem;align-items:center;
+  background:rgba(255,255,255,.6); /* para que el texto se lea sobre el fondo */
+}
+#confirmar .marco{background:rgba(91,63,122,.65)}
+.marco.sin-img{grid-template-columns:1fr}
+figure{margin:0}
+.marco img{display:block;width:100%;max-height:420px;object-fit:contain}
+@media(max-width:720px){.marco{grid-template-columns:1fr}}
+
+/* Letras: relleno de color con contorno dorado */
+.titulo,.subtitulo{
+  font-family:'Fredoka',sans-serif;font-weight:700;line-height:1.05;
+  color:var(--fuerte);-webkit-text-stroke:7px var(--oro-claro);paint-order:stroke fill;
+  margin:.25em 0;text-wrap:balance;
+}
+.titulo{font-size:clamp(2.6rem,8vw,4.6rem)}
+.subtitulo{font-size:clamp(1.9rem,5vw,2.6rem);-webkit-text-stroke-width:5px}
+
+/* Nombre en la entrada y en la portada con otra tipografía */
+#entrada .titulo,#inicio .titulo{
+  font-family:'Yesteryear',cursive;font-weight:400;
+  font-size:clamp(3rem,9vw,5rem);
+  -webkit-text-stroke:3px var(--oro-claro);
+}
+
+.pildora{
+  display:inline-block;margin:0;padding:.2em 1.5em;
+  border:3px solid var(--oro-claro);border-radius:999px;
+  background:var(--fuerte);color:#fff;font:600 1.35rem 'Fredoka',sans-serif;
+}
+.lila .pildora,.lila .boton{color:var(--lila)}
+
+.boton{
+  display:inline-block;margin:.8rem 0;padding:.7em 1.6em;cursor:pointer;text-decoration:none;
+  font:600 1.1rem 'Fredoka',sans-serif;color:#fff;background:var(--fuerte);
+  border:3px solid var(--oro-claro);border-radius:999px;transition:transform .15s;
+}
+.boton:hover{transform:translateY(-2px)}
+:focus-visible{outline:3px solid var(--oro);outline-offset:3px}
+
+.frase{font-size:1.4rem;max-width:34ch;margin:0 auto 1rem}
+.nota{font-size:1.1rem;font-style:italic;max-width:38ch;margin:.5rem auto}
+p{margin:.6rem 0}
+
+.datos,.regalos{list-style:none;padding:0;margin:1rem 0}
+.datos li{margin:.5rem 0}
+.regalos{display:inline-block;text-align:left}
+.regalos li::before{content:"\2665  ";color:var(--fuerte)}
+.alias{margin-top:1rem;padding:.8rem 1rem;border:2px dashed var(--oro);border-radius:1rem;background:rgba(255,255,255,.55)}
+
+.cuenta{display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap;margin-top:.8rem}
+.cuenta div{min-width:4.6rem;padding:.5rem .6rem;border:2px solid var(--oro);border-radius:1rem;background:rgba(255,255,255,.6)}
+.cuenta b{display:block;font:700 2rem 'Fredoka',sans-serif}
+.cuenta span{font-size:1rem}
+
+/* Pantalla de entrada */
+#entrada{
+  position:fixed;inset:0;z-index:10;display:grid;place-items:center;padding:1rem;overflow:hidden;
+  background:var(--bg);color:var(--tx);transition:opacity .8s,visibility .8s;
+}
+#entrada .marco{grid-template-columns:1fr;max-width:560px;background:rgba(255,255,255,.35)}
+body:not(.cerrado) #entrada{opacity:0;visibility:hidden}
+
+/* Único momento animado: el título aparece al abrir */
+body:not(.cerrado) #inicio .titulo{animation:aparece 1s .3s both}
+@keyframes aparece{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
