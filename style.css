@@ -7,7 +7,7 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;font:500 1.25rem/1.5 'Cormorant Garamond',Georgia,serif}
+body{margin:0;font:500 1.35rem/1.5 'Cormorant Garamond',Georgia,serif}
 body.cerrado{overflow:hidden}
 
 /* Paleta por sección (una por lámina) */
@@ -15,7 +15,7 @@ body.cerrado{overflow:hidden}
 .rosa.claro{--bg:#fde4ec}
 .menta{--bg:var(--menta);--fuerte:var(--menta-fuerte);--tx:#24493e}
 .celeste{--bg:var(--celeste);--fuerte:var(--celeste-fuerte);--tx:#27425f}
-.lila{--bg:var(--lila);--fuerte:#f5a9d0;--tx:#fff}
+.lila{--bg:var(--lila);--fuerte:#f5a9d0;--tx:#5b3b76}
 .crema{--bg:var(--crema);--fuerte:var(--crema-fuerte);--tx:#5a3d12}
 
 section{
@@ -48,7 +48,7 @@ section::before,#entrada::before{
   display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.3fr);gap:2rem;align-items:center;
   background:rgba(255,255,255,.6); /* para que el texto se lea sobre el fondo */
 }
-#confirmar .marco{background:rgba(91,63,122,.65)}
+#confirmar .marco{background:rgba(240,230,252,.45)}
 .marco.sin-img{grid-template-columns:1fr}
 figure{margin:0}
 .marco img{display:block;width:100%;max-height:420px;object-fit:contain}
@@ -85,8 +85,10 @@ figure{margin:0}
 .boton:hover{transform:translateY(-2px)}
 :focus-visible{outline:3px solid var(--oro);outline-offset:3px}
 
-.frase{font-size:1.4rem;max-width:34ch;margin:0 auto 1rem}
-.nota{font-size:1.1rem;font-style:italic;max-width:38ch;margin:.5rem auto}
+.frase{font-size:1.5rem;max-width:34ch;margin:0 auto 1rem}
+.nota{font-size:1.2rem;font-style:italic;max-width:38ch;margin:.5rem auto}
+#fiesta .nota{font-family:inherit;font-size:1.35rem}
+#fiesta .boton{font-family:inherit;font-size:1.25rem}
 p{margin:.6rem 0}
 
 .datos,.regalos{list-style:none;padding:0;margin:1rem 0}
@@ -98,7 +100,7 @@ p{margin:.6rem 0}
 .cuenta{display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap;margin-top:.8rem}
 .cuenta div{min-width:4.6rem;padding:.5rem .6rem;border:2px solid var(--oro);border-radius:1rem;background:rgba(255,255,255,.6)}
 .cuenta b{display:block;font:700 2rem 'Fredoka',sans-serif}
-.cuenta span{font-size:1rem}
+.cuenta span{font-size:1.1rem}
 
 /* Pantalla de entrada */
 #entrada{
